@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+body{
+    margin: -1px;
+}
+.page-wrap {
+    max-width: 100%;
+    /* height: 825px; */
+}
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-header {
+    background-color:white;
+    color: black;
+    padding: 40px;
+    font-size: 34px;
+    margin: auto;
+}
+.align-items-center {
+    align-items: center;
+    width: 100%;
+}
+.control-wrap{
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.content-1 {
+    max-width: 15%;
+    width: 15%;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+.content-2 {
+    max-width: 85%;
+    margin: auto;
+    margin-top: 50px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 1100px;
+    margin: auto;
+    padding: 50px;
+}
+
+ul {
+    list-style: none;
+    margin-top: 50px;
+}
+ul li,a{
+    font-size: 20px;
+    text-align: left;
+    color: red;
+    margin-bottom: 20px;
+}
+a:hover{
+    text-decoration: unset;
+}
+.title {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.text-align-center {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+
+}
+
+.fa-circle-user {
+    padding: 5px;
+    font-size: 25px;
+}
+.form-group{
+    align-items: center !important;
+}
+.form-group label{
+width: 260px;
+font-size: 25px;
+}
+
+.form-group input,textarea {
+    width: 800px;
+    margin: 0 0 20px;
+    padding: 5px;
+    height: 50px;
+    margin-bottom: -15px;
+}
+.banner-text{
+    height: 100px !important;
+}
+.control-wrap{
+    margin-top: 80px;
+}
+.text-center{
+    margin:auto;
+}
+.lout{
+    margin-left: 80%;
+}
