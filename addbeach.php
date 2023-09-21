@@ -1,11 +1,10 @@
 <?php
+require_once('./layouts/header.php'); 
 session_start();
 if ($_SESSION['role'] == "user") {
     header('location: index.php');
     exit();
 }
-
-$conn = connect();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'];
@@ -17,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if (move_uploaded_file($image_tmp, $image_name)) {
 
-            $sql = "INSERT INTO beaches (beaches_name, beaches_description, beaches_img) VALUES ('$name', '$description', $category, $price, '../assets/$image_name')";
+            $sql = "INSERT INTO beaches (beaches_name, beaches_description, regions_id, beaches_img) VALUES ('$name', '$description', '1', './assets/$image_name')";
             $res = $conn->query($sql);
             if ($res) {
 
@@ -40,7 +39,6 @@ $conn->close();
 <html lang="en">
 
 <head>
-    <?php require_once('./layouts/header.php'); ?>
     <link rel="stylesheet" href="./assets/css/editbeach.css">
 </head>
 
@@ -87,13 +85,13 @@ $conn->close();
                                 <textarea name="description" id="description" required></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="category">Category</label>
-                                <select name="category" id="category" required>
-                                    <option value="">Select a category</option>
-                                    <option value="East">East</option>
-                                    <option value="West">West</option>
-                                    <option value="Southern">Southern</option>
-                                    <option value="North">North</option>
+                                <label for="regions">Regions</label>
+                                <select name="regions" id="regions" required>
+                                    <option value="">Select a Regions</option>
+                                    <option value="3">East</option>
+                                    <option value="1">West</option>
+                                    <option value="4">Southern</option>
+                                    <option value="2">North</option>
                                 </select>
                             </div>
                             <div class="form-group d-flex">

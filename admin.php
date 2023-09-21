@@ -62,7 +62,7 @@ function getBeach() {
                 </div>
                 <div class="functions">
                     <a style="margin-top: 20px;margin-bottom:20px;float:right;" class="btn btn-primary"
-                        href="./function/addbeach.php">Add new Beach</a>
+                        href="./addbeach.php">Add new Beach</a>
                 </div>
                 <table class="table table-responsive">
                     <thead>
@@ -92,7 +92,7 @@ function getBeach() {
                             echo "<td><img src=" . $beach['beaches_img'] . "></td>";
                             echo "<td>" . $beach['beaches_description'] . "</td>";
                             echo "<td>" . $ridname . "</td>";
-                            echo '<td><a href="./function/editbeach.php?id=' . $beach['beaches_id'] . '">Sửa</a></td>';
+                            echo '<td><a href="./editbeach.php?id=' . $beach['beaches_id'] . '">Sửa</a></td>';
                             echo '<td><a onclick="deletebeach(event, ' . $beach['beaches_id'] . ')" href="#">Xóa</a></td>';
                             echo "</tr>";
                         }
@@ -113,7 +113,7 @@ function getBeach() {
     function deletebeach(event, beachId) {
         event.preventDefault();
         if (confirm('Bạn có muốn xóa biển này không?')) {
-            window.location.href = './function/deletebeach.php?id=' + beachId;
+            window.location.href = './deletebeach.php?id=' + beachId;
         }
     }
 </script>

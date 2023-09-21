@@ -1,13 +1,13 @@
 <?php
-require_once '../controller/connect.php';
+require_once('../layouts/header.php'); 
 session_start();
-if (!isset($_SESSION['admin'])) {
-    header('location: ../login.php');
+if ($_SESSION['role'] == "admin") {
+} else {
+    header('location: index.php');
     exit();
-}
+};
 if (isset($_GET['id'])) {
     $beachId = $_GET['id'];
-    $conn = connect();
     $sql = "SELECT * FROM beach WHERE id='$beachId'";
     $result = $conn->query($sql);
     if ($result->num_rows == 1) {
@@ -43,8 +43,7 @@ if (isset($_GET['id'])) {
 <html lang="en">
 
 <head>
-    <?php require_once('../../layout/head.php'); ?>
-    <link rel="stylesheet" href="../css/editbeach.css">
+    <link rel="stylesheet" href="../assets/css/editbeach.css">
 </head>
 
 <body>
